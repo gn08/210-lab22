@@ -49,7 +49,8 @@ public:
         }
     }
 //insert_after() new node after specifc position
-//arguments:
+//arguments:int valoue- added value, int position-position where inserted
+//return: void
     void insert_after(int value, int position) {
         if (position < 0) {
             cout << "Position must be >= 0." << endl;
@@ -80,7 +81,9 @@ public:
             tail = newNode; // Inserting at the end
         temp->next = newNode;
     }
-
+//delete_pos() delete node at specifc position
+//arguments: int position- specific position where deleted
+//returns: void
     void delete_pos(int position) {
         if (!head || position < 0) return; // Empty list for wrong position
 
@@ -104,7 +107,7 @@ public:
 
         delete temp;
     }
-
+//pop_front() remove node from front
     void pop_front(){
         if (!head) return;
 
@@ -117,7 +120,7 @@ public:
             tail = nullptr;
         delete temp;
     }
-
+//pop_back() removde node from back
     void pop_back() {
         if (!tail) return;
 
@@ -130,7 +133,7 @@ public:
             head = nullptr;
         delete temp;
     }
-
+//print from front to back
     void print() {
         Node* current = head;
         if (!current) return;
@@ -140,7 +143,7 @@ public:
         }
         cout << endl;
     }
-
+// print backwards
     void print_reverse() {
         Node* current = tail;
         if (!current) return;
@@ -150,7 +153,7 @@ public:
         }
         cout << endl;
     }
-
+// destructor- delete all nodes
     ~DoublyLinkedList() {
         while (head) {
             Node* temp = head;
