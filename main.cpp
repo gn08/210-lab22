@@ -106,7 +106,7 @@ public:
         Node* temp = head;
         head = head -> next;
 
-        if()
+        if(head)
             head -> prev = nullptr;
         else
             tail = nullptr;
@@ -114,15 +114,15 @@ public:
     }
 
     void pop_back() {
-        if (!head) return;
+        if (!tail) return;
 
-        Node* temp = head;
-        head = head -> next;
+        Node* temp = tail;
+        tail = tail -> next;
 
-        if()
-            head -> prev = nullptr;
+        if(tail)
+            tail -> prev = nullptr;
         else
-            tail = nullptr;
+            head = nullptr;
         delete temp;
     }
 
@@ -142,6 +142,16 @@ public:
         while (current) {
             cout << current->data << " ";
             current = current->prev;
+        }
+        cout << endl;
+    }
+
+    void print(){
+        Node* current = head;
+        if (!current) return;
+        while (current) {
+            cout << current->data << " ";
+            current = current->next;
         }
         cout << endl;
     }
