@@ -178,22 +178,21 @@ int main() {
     cout << "List backward: ";
     list.print_reverse();
 
-    cout <<
+    cout << "Pop front: " << endl;
     list.pop_front();
     list.print();
 
-    cout <<
+    cout << "Pop back: " << endl;
     list.pop_back();
     list.print();
 
-    cout <<
+    cout << "Delete value 5:" << endl;
     list.delete_pos(5);
 
     cout << "Deleting list, then trying to print.\n";
     list.~DoublyLinkedList();
     cout << "List forward: ";
     list.print();
-
 
     return 0;
 }
