@@ -22,7 +22,9 @@ private:
 public:
     // constructor
     DoublyLinkedList() { head = nullptr; tail = nullptr; }
-
+//oush_back() new node to end
+//arguments:int value- added value
+//return:void
     void push_back(int value) {
         Node* newNode = new Node(value);
         if (!tail)  // if there's no tail, the list is empty
@@ -33,7 +35,9 @@ public:
             tail = newNode;
         }
     }
-
+//push_front() new node to dront
+//arguments:int value- added value
+//return:void
     void push_front(int value) {
         Node* newNode = new Node(value);
         if (!head)  // if there's no head, the list is empty
@@ -44,7 +48,8 @@ public:
             head = newNode;
         }
     }
-
+//insert_after() new node after specifc position
+//arguments:
     void insert_after(int value, int position) {
         if (position < 0) {
             cout << "Position must be >= 0." << endl;
