@@ -146,16 +146,6 @@ public:
         cout << endl;
     }
 
-    void print(){
-        Node* current = head;
-        if (!current) return;
-        while (current) {
-            cout << current->data << " ";
-            current = current->next;
-        }
-        cout << endl;
-    }
-
     ~DoublyLinkedList() {
         while (head) {
             Node* temp = head;
