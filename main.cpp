@@ -180,12 +180,14 @@ int main() {
 
     cout <<
     list.pop_front();
+    list.print();
 
     cout <<
     list.pop_back();
+    list.print();
 
     cout <<
-    list.delete_pos(2);
+    list.delete_pos(5);
 
     cout << "Deleting list, then trying to print.\n";
     list.~DoublyLinkedList();
