@@ -100,6 +100,21 @@ public:
         delete temp;
     }
 
+    void pop_front(){
+        if (!head) return;
+
+        Node* temp = head;
+        head = head -> next;
+
+        if()
+            head -> prev = nullptr;
+        else
+            tail = nullptr;
+        delete temp;
+    }
+
+    void
+
     void print() {
         Node* current = head;
         if (!current) return;
